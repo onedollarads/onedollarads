@@ -26,16 +26,18 @@
             color: white;
             padding: 40px 20px;
             text-align: center;
+            border-bottom: 4px solid #ff5722;
         }
 
         header h1 {
             margin-bottom: 10px;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             animation: fadeIn 2s ease-in;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            font-weight: 400;
             animation: fadeIn 3s ease-in;
         }
 
@@ -45,46 +47,52 @@
         }
 
         main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         main h2 {
             margin-bottom: 15px;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #333;
+            text-align: center;
         }
 
         main p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .cta-button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
+            margin-top: 30px;
+            padding: 18px 35px;
             background-color: #ff5722;
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .cta-button:hover {
             background-color: #e64a19;
+            transform: scale(1.05);
         }
 
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            position: relative;
+            margin-top: 40px;
         }
 
         footer p {
@@ -93,11 +101,12 @@
         }
 
         .testimonial {
-            background-color: white;
+            background-color: #f9f9f9;
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
         }
 
         .testimonial p {
@@ -106,7 +115,7 @@
         }
 
         .testimonial .author {
-            text-align: right;
+            margin-top: 15px;
             font-weight: bold;
             color: #333;
         }
@@ -115,19 +124,19 @@
 <body>
     <header role="banner">
         <h1>Welcome to OneDollarAds</h1>
-        <p>Your ads for just $1</p>
+        <p>Advertise for just $1</p>
     </header>
     
     <main role="main">
         <section>
             <h2>How It Works</h2>
-            <p>Place your ads on our platform for just $1.</p>
-            <p>Sign up today and start advertising!</p>
+            <p>With OneDollarAds, placing ads on our platform is as simple as a click! For just $1, you can reach a wide audience and drive more traffic to your business.</p>
+            <p>Sign up today, set your budget, and start advertising to make your business shine!</p>
             <a href="#signup" class="cta-button">Get Started Now</a>
         </section>
 
         <section class="testimonial">
-            <p>"OneDollarAds helped me reach thousands of customers with just a small budget. Highly recommended!"</p>
+            <p>"OneDollarAds helped me reach thousands of customers with just a small budget. I highly recommend it!"</p>
             <p class="author">- Jane Doe, Happy Customer</p>
         </section>
     </main>
