@@ -15,30 +15,39 @@
 
         /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            background-image: url('https://via.placeholder.com/1600x900/ff5722/ffffff?text=Your+Ad+Here'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
         }
 
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
             border-bottom: 4px solid #ff5722;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            margin-bottom: 10px;
-            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
             animation: fadeIn 2s ease-in;
         }
 
         header p {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 400;
             animation: fadeIn 3s ease-in;
+            margin-top: 10px;
         }
 
         @keyframes fadeIn {
@@ -50,28 +59,30 @@
             padding: 40px 20px;
             max-width: 900px;
             margin: 40px auto;
-            background-color: white;
+            background-color: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         main h2 {
             margin-bottom: 15px;
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: #333;
             text-align: center;
+            font-weight: bold;
         }
 
         main p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
             line-height: 1.8;
+            color: #555;
         }
 
         .cta-button {
             display: inline-block;
             margin-top: 30px;
-            padding: 18px 35px;
+            padding: 20px 40px;
             background-color: #ff5722;
             color: white;
             text-decoration: none;
@@ -79,11 +90,13 @@
             border-radius: 5px;
             text-align: center;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
             background-color: #e64a19;
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         footer {
@@ -91,8 +104,8 @@
             color: white;
             text-align: center;
             padding: 20px;
-            position: relative;
             margin-top: 40px;
+            border-radius: 10px 10px 0 0;
         }
 
         footer p {
@@ -101,42 +114,50 @@
         }
 
         .testimonial {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
             text-align: center;
         }
 
         .testimonial p {
             font-style: italic;
             color: #555;
+            font-size: 1.2rem;
         }
 
         .testimonial .author {
-            margin-top: 15px;
+            margin-top: 20px;
             font-weight: bold;
             color: #333;
+        }
+
+        .testimonial img {
+            max-width: 60px;
+            border-radius: 50%;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <header role="banner">
         <h1>Welcome to OneDollarAds</h1>
-        <p>Advertise for just $1</p>
+        <p>Advertise for just $1 and reach thousands of customers!</p>
     </header>
     
     <main role="main">
         <section>
             <h2>How It Works</h2>
-            <p>With OneDollarAds, placing ads on our platform is as simple as a click! For just $1, you can reach a wide audience and drive more traffic to your business.</p>
-            <p>Sign up today, set your budget, and start advertising to make your business shine!</p>
+            <p>With OneDollarAds, you can start advertising your business on our platform with just $1. It’s that simple! Our platform helps you reach a wide audience without breaking the bank. Place your ad today and watch your business grow!</p>
+            <p>Ready to boost your business? Join us now and get started!</p>
             <a href="#signup" class="cta-button">Get Started Now</a>
         </section>
 
         <section class="testimonial">
-            <p>"OneDollarAds helped me reach thousands of customers with just a small budget. I highly recommend it!"</p>
+            <img src="https://via.placeholder.com/60" alt="Testimonial Author">
+            <p>"OneDollarAds helped me reach thousands of customers with just a small budget. It was the best decision for my business!"</p>
             <p class="author">- Jane Doe, Happy Customer</p>
         </section>
     </main>
