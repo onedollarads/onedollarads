@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OneDollarAds - Advertise for just $1!">
+    <meta name="keywords" content="advertising, affordable ads, $1 ads, OneDollarAds, cheap advertising">
     <title>OneDollarAds - Affordable Advertising</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         /* Basic Reset */
         * {
@@ -15,39 +17,28 @@
 
         /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
-            background-image: url('https://via.placeholder.com/1600x900/ff5722/ffffff?text=Your+Ad+Here'); /* Placeholder image */
-            background-size: cover;
-            background-position: center;
-            overflow-x: hidden;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: #333;
             color: white;
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 4px solid #ff5722;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
-            margin-bottom: 15px;
-            font-size: 3rem;
-            text-transform: uppercase;
-            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
             animation: fadeIn 2s ease-in;
         }
 
         header p {
-            font-size: 1.5rem;
-            font-weight: 400;
+            font-size: 1.2rem;
             animation: fadeIn 3s ease-in;
-            margin-top: 10px;
         }
 
         @keyframes fadeIn {
@@ -55,57 +46,72 @@
             to { opacity: 1; }
         }
 
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
         main {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         main h2 {
             margin-bottom: 15px;
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #333;
-            text-align: center;
-            font-weight: bold;
         }
 
         main p {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #555;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
         .cta-button {
             display: inline-block;
-            margin-top: 30px;
-            padding: 20px 40px;
+            margin-top: 20px;
+            padding: 15px 30px;
             background-color: #ff5722;
             color: white;
             text-decoration: none;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
         }
 
         .cta-button:hover {
             background-color: #e64a19;
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            border-radius: 10px 10px 0 0;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
 
         footer p {
@@ -114,56 +120,143 @@
         }
 
         .testimonial {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
         .testimonial p {
             font-style: italic;
             color: #555;
-            font-size: 1.2rem;
         }
 
         .testimonial .author {
-            margin-top: 20px;
+            text-align: right;
             font-weight: bold;
             color: #333;
         }
 
-        .testimonial img {
-            max-width: 60px;
-            border-radius: 50%;
+        #signup {
+            margin-top: 30px;
+        }
+
+        #signup form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #signup label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #signup input, #signup textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #signup button {
+            align-self: flex-start;
+        }
+
+        .social-links {
             margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header role="banner">
         <h1>Welcome to OneDollarAds</h1>
-        <p>Advertise for just $1 and reach thousands of customers!</p>
+        <p>Your ads for just $1</p>
     </header>
+
+    <nav role="navigation">
+        <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+        </ul>
+    </nav>
     
     <main role="main">
-        <section>
+        <section id="how-it-works">
             <h2>How It Works</h2>
-            <p>With OneDollarAds, you can start advertising your business on our platform with just $1. It’s that simple! Our platform helps you reach a wide audience without breaking the bank. Place your ad today and watch your business grow!</p>
-            <p>Ready to boost your business? Join us now and get started!</p>
-            <a href="#signup" class="cta-button">Get Started Now</a>
+            <p>Place your ads on our platform for just $1.</p>
+            <p>Sign up today and start advertising!</p>
+            <a href="#signup" class="cta-button" aria-label="Get started with OneDollarAds">Get Started Now</a>
+        </section>
+
+        <section class="testimonial" id="testimonials">
+            <p>"OneDollarAds helped me reach thousands of customers with just a small budget. Highly recommended!"</p>
+            <p class="author">- Jane Doe, Happy Customer</p>
         </section>
 
         <section class="testimonial">
-            <img src="https://via.placeholder.com/60" alt="Testimonial Author">
-            <p>"OneDollarAds helped me reach thousands of customers with just a small budget. It was the best decision for my business!"</p>
-            <p class="author">- Jane Doe, Happy Customer</p>
+            <p>"Amazing service! I got more customers than I expected for just $1."</p>
+            <p class="author">- John Smith, Small Business Owner</p>
+        </section>
+
+        <section id="signup">
+            <h2>Sign Up Today</h2>
+            <form action="/signup" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="ad-content">Ad Content:</label>
+                <textarea id="ad-content" name="ad-content" rows="4" required></textarea>
+                
+                <button type="submit" class="cta-button">Submit Ad</button>
+            </form>
         </section>
     </main>
     
     <footer role="contentinfo">
-        <p>&copy; 2025 OneDollarAds. All rights reserved.</p>
+        <p>&copy; 2025 OneDollarAds. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a></p>
+        <div class="social-links">
+            <a href="https://facebook.com/onedollarads" aria-label="Facebook">Facebook</a>
+            <a href="https://twitter.com/onedollarads" aria-label="Twitter">Twitter</a>
+            <a href="https://instagram.com/onedollarads" aria-label="Instagram">Instagram</a>
+        </div>
     </footer>
 </body>
-</html>
+            </html>
