@@ -21,8 +21,33 @@
             background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
+        /* Loading Animation */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #ff5722;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Header */
         header {
             background-color: #333;
             color: white;
@@ -41,11 +66,7 @@
             animation: fadeIn 3s ease-in;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
+        /* Navigation */
         nav {
             background-color: #444;
             padding: 10px;
@@ -71,137 +92,164 @@
             text-decoration: underline;
         }
 
+        /* Main Content */
         main {
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            padding-bottom: 100px; /* Space for footer */
         }
 
-        main h2 {
-            margin-bottom: 15px;
-            font-size: 2rem;
-            color: #333;
+        /* Testimonials */
+        .testimonial {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
 
-        main p {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
+        /* Forms */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        /* Buttons */
         .cta-button {
             display: inline-block;
-            margin-top: 20px;
             padding: 15px 30px;
             background-color: #ff5722;
             color: white;
             text-decoration: none;
-            font-size: 1.2rem;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            cursor: pointer;
+            border: none;
         }
 
         .cta-button:hover {
             background-color: #e64a19;
         }
 
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        .testimonial {
-            background-color: white;
             padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+
+        .dark-mode header,
+        .dark-mode footer,
+        .dark-mode nav {
+            background-color: #222;
+        }
+
+        .dark-mode .testimonial {
+            background-color: #444;
+            color: #f4f4f4;
+        }
+
+        /* Progress Bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: #ff5722;
+            width: 0%;
+            z-index: 1000;
+        }
+
+        /* FAQ */
+        details {
+            margin: 15px 0;
+            background: white;
+            padding: 15px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
         }
 
-        .testimonial p {
-            font-style: italic;
-            color: #555;
-        }
-
-        .testimonial .author {
-            text-align: right;
+        summary {
             font-weight: bold;
-            color: #333;
+            cursor: pointer;
         }
 
-        #signup {
-            margin-top: 30px;
-        }
-
-        #signup form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #signup label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        #signup input, #signup textarea {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        #signup button {
-            align-self: flex-start;
-        }
-
-        .social-links {
-            margin-top: 10px;
-        }
-
-        .social-links a {
+        /* Cookie Consent */
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
             color: white;
-            text-decoration: none;
-            margin: 0 10px;
+            padding: 15px;
+            text-align: center;
+            z-index: 1001;
         }
 
-        .social-links a:hover {
-            text-decoration: underline;
+        /* Back to Top */
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            padding: 10px 15px;
         }
 
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
-            .cta-button {
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
+            header h1 { font-size: 2rem; }
+            header p { font-size: 1rem; }
+            nav ul li { display: block; margin: 10px 0; }
+            .cta-button { padding: 10px 20px; }
         }
     </style>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="theme-toggle" class="cta-button" style="position: fixed; top: 10px; right: 10px;">
+        🌙 Dark Mode
+    </button>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="cta-button">↑ Top</button>
+
     <header role="banner">
         <h1>Welcome to OneDollarAds</h1>
         <p>Your ads for just $1</p>
@@ -212,30 +260,35 @@
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#signup">Sign Up</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
+
     <main role="main">
+        <!-- How It Works -->
         <section id="how-it-works">
             <h2>How It Works</h2>
             <p>Place your ads on our platform for just $1.</p>
-            <p>Sign up today and start advertising!</p>
             <a href="#signup" class="cta-button" aria-label="Get started with OneDollarAds">Get Started Now</a>
         </section>
 
-        <section class="testimonial" id="testimonials">
-            <p>"OneDollarAds helped me reach thousands of customers with just a small budget. Highly recommended!"</p>
-            <p class="author">- Jane Doe, Happy Customer</p>
+        <!-- Testimonials -->
+        <section id="testimonials">
+            <div class="testimonial">
+                <p>"OneDollarAds helped me reach thousands of customers with just a small budget. Highly recommended!"</p>
+                <p class="author">- Jane Doe, Happy Customer</p>
+            </div>
+            <div class="testimonial">
+                <p>"Amazing service! I got more customers than I expected for just $1."</p>
+                <p class="author">- John Smith, Small Business Owner</p>
+            </div>
         </section>
 
-        <section class="testimonial">
-            <p>"Amazing service! I got more customers than I expected for just $1."</p>
-            <p class="author">- John Smith, Small Business Owner</p>
-        </section>
-
+        <!-- Signup Form -->
         <section id="signup">
             <h2>Sign Up Today</h2>
-            <form action="/signup" method="POST">
+            <form id="ad-form" action="/signup" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -248,8 +301,55 @@
                 <button type="submit" class="cta-button">Submit Ad</button>
             </form>
         </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form" action="/subscribe" method="POST">
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="email" required>
+                <button type="submit" class="cta-button">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>How much does it cost to advertise?</summary>
+                <p>It costs just $1 to place an ad on our platform.</p>
+            </details>
+            <details>
+                <summary>How long will my ad stay live?</summary>
+                <p>Your ad will remain live for 30 days.</p>
+            </details>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="/contact" method="POST">
+                <label for="contact-name">Name:</label>
+                <input type="text" id="contact-name" name="name" required>
+                
+                <label for="contact-email">Email:</label>
+                <input type="email" id="onedollarads6@gmail.com" name="onedollarads" required>
+                
+                <label for="contact-message">Message:</label>
+                <textarea id="contact-message" name="message" rows="4" required></textarea>
+                
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
     </main>
-    
+
+    <!-- Cookie Consent -->
+    <div id="cookie-consent">
+        <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+        <button onclick="acceptCookies()" class="cta-button">Accept</button>
+    </div>
+
+    <!-- Footer -->
     <footer role="contentinfo">
         <p>&copy; 2025 OneDollarAds. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a></p>
         <div class="social-links">
@@ -258,5 +358,98 @@
             <a href="https://instagram.com/onedollarads" aria-label="Instagram">Instagram</a>
         </div>
     </footer>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); z-index: 1000;">
+        <p>Thank you for your submission! We'll get back to you soon.</p>
+        <button onclick="closeModal()" class="cta-button">Close</button>
+    </div>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            document.getElementById('loading').style.display = 'none';
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.textContent = document.body.classList.contains('dark-mode') 
+                ? '☀️ Light Mode' 
+                : '🌙 Dark Mode';
+        });
+
+        // Form Validation
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(event) {
+                const inputs = Array.from(form.elements).filter(el => el.required);
+                const isValid = inputs.every(el => el.checkValidity());
+                
+                if (!isValid) {
+                    event.preventDefault();
+                    alert('Please fill out all required fields correctly.');
+                } else {
+                    event.preventDefault();
+                    showConfirmationModal();
+                }
+            });
+        });
+
+        // Confirmation Modal
+        function showConfirmationModal() {
+            document.getElementById('confirmation-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('confirmation-modal').style.display = 'none';
+        }
+
+        // Cookie Consent
+        function acceptCookies() {
+            document.getElementById('cookie-consent').style.display = 'none';
+            localStorage.setItem('cookieConsent', 'accepted');
+        }
+
+        if (localStorage.getItem('cookieConsent') === 'accepted') {
+            document.getElementById('cookie-consent').style.display = 'none';
+        }
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            document.getElementById('progress-bar').style.width = scrollPercent + '%';
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Analytics (Replace UA-XXXXXX-X with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXX-X');
+    </script>
 </body>
-            </html>
+    </html>
